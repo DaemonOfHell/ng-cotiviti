@@ -1,0 +1,29 @@
+<h2 id="dashboard-heading">{{myName}} | {{"Dashboard"|uppercase}} </h2>
+<div class="my-info-section">
+     <div class="info-tab">
+         <label for="full-name">name: </label>
+         <p id="full-name">{{myName}}</p>
+     </div>
+
+     <div class="info-tab">
+        <label for="acc-type">account-type: </label>
+        <p id="acc-type">{{accType}}</p>
+     </div>
+
+     <div class="info-tab">
+        <label for="email">email: </label>
+        <p id="email">{{email}}</p>
+     </div>
+</div>
+ 
+<app-personal-bids [myBids]="myBids" ></app-personal-bids>
+<app-dashboard-summary></app-dashboard-summary>
+
+<!-- <h2>Top Bids</h2>
+<div class="heroes-menu">
+    <a *ngFor="let b of bids"
+        routerLink="/detail/{{b.pid}}">
+        {{b.title}}
+    </a>
+</div>
+<app-hero-search></app-hero-search> -->

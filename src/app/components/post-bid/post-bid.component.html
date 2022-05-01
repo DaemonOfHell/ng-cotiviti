@@ -1,0 +1,18 @@
+
+<form class="post-form" (ngSubmit)="onSubmit()" *ngIf="showPostForm">
+    <h2> New Post form</h2>
+    <div class="form-control">
+        <label for="title">title : </label>
+        <input type="text" name="title" [(ngModel)]="title" id="title" placeholder="product title">
+    </div>
+    <div class="form-control">
+        <label for="startingPrice">starting price : </label>
+        <input type="text" name="startingPrice" [(ngModel)]="startingPrice" id="startingPrice" placeholder="enter desired price">
+    </div>
+    <!-- <div class="form-control form-control-check">
+        <label for="reminder">Set Reminder</label>
+        <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder">
+    </div> -->
+    <!-- {{text}} -->
+    <input type="submit" value="Start Auction" class="btn btn-block">
+</form>

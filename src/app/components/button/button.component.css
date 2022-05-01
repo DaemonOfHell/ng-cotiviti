@@ -1,0 +1,14 @@
+button{
+    /* position: absolute;
+    right: .5rem !important; 
+    top: .5rem !important; 
+    width: 5px; 
+    height: 4px; */
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    color: #fff;
+}

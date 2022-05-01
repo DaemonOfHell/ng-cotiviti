@@ -1,0 +1,19 @@
+<h1 class="page-heading">All Bids</h1>    
+
+<div class="list-heading-3">
+        <h3 class="badge">bid</h3>
+        <h3 class="title">title</h3>
+        <h3 class="price">running_price</h3>
+</div>
+<ol class="all-bids-list">
+
+    <li *ngFor="let bid of allBids">
+        <div class="bid-item"> 
+            <span class="badge">{{bid.pid}}</span>
+            <span class="title">{{bid.title}}</span>
+            <span class="price">{{bid.running_price}}./-</span>
+        </div>
+        <button type="button" class="remove" title="remove bid"
+        (click)="removeBid(bid)">x</button>
+    </li>
+</ol>

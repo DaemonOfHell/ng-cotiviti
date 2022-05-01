@@ -1,0 +1,31 @@
+nav{
+  display: block;
+  width: 100%;
+  /* position: absolute; */
+  top: 0;
+  left:0;
+  background-color: #3d3d3d;
+  margin-bottom: 60px;
+}
+
+nav a{
+    display: inline-block; 
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    padding: 14px 10px;
+    border: 1px solid black;
+} 
+nav a#nav-brand{
+  pointer-events: none;
+  font-weight: 800;
+  margin-right: 70px;
+}
+ 
+nav a:hover {
+  color: white;
+  background-color: #42545C;
+}
+nav a.active {
+  background-color: black;
+}

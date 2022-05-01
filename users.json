@@ -1,0 +1,76 @@
+{
+    "users": [
+      {
+        "uid": 11,
+        "name": "Zachary Peterson",
+        "email": "z@gm.com",
+        "password":"123"
+      },
+      {
+        "uid": 13,
+        "name": "Jarrett Bates",
+        "email": "zack@y.com",
+        "password":"123"
+      },
+      {
+        "uid": 14,
+        "name": "Jay Dixon",
+        "email": "jay_dix04@h.com",
+        "password":"123"
+      },
+      {
+        "uid": 15,
+        "name": "Jacob Tyler",
+        "email": "yo_boi_jacob@g.com",
+        "password":"123"
+      },
+      {
+        "uid": 16,
+        "name": "Laurel Chang",
+        "email": "larel_2@gm.com",
+        "password":"123"
+      },
+      {
+        "uid": 17,
+        "name": "Thaddeus Bernard",
+        "email": "thaeudus_dictator@homie.com",
+        "password":"123"
+      },
+      {
+        "uid": 2,
+        "name": "Tommy Dreamer",
+        "email": "tom_boi2kl@lph.com",
+        "password":"123"
+      },
+      {
+        "uid": 4,
+        "name": "Mitsuha Uzumaki",
+        "email": "mitsuha@sakura.com",
+        "password":"123"
+      },
+      {
+        "uid": 20,
+        "name": "Jay Shree Krishna Murthi",
+        "email": "jskm@sl.com",
+        "password":"123"
+      },
+      {
+        "name": "Shelby Rollins",
+        "email": "shelly@gm.com",
+        "password":"123",
+        "uid": 21
+      },
+      {
+        "name": "Christensen Juvanski",
+        "email": "juwanski@gm.com",
+        "password":"123",
+        "uid": 22
+      },
+      {
+        "name": "test",
+        "email": "t@t.com",
+        "password":"123",
+        "uid": 110
+      }
+    ]
+  }

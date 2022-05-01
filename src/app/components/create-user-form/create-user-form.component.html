@@ -1,0 +1,16 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="name">Name:</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="user's full name">
+    </div>
+    <div class="form-control">
+        <label for="email">Email:</label>
+        <input type="text" name="email" [(ngModel)]="email" id="email" placeholder="email">
+    </div>
+    <div class="form-control">
+        <label for="password">Password:</label>
+        <input type="text" name="password" [(ngModel)]="password" id="password"  placeholder="set a password">
+    </div>
+ 
+    <input type="submit" value="create user" class="btn btn-block">
+</form>

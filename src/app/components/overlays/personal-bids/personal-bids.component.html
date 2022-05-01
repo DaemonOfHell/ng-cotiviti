@@ -1,0 +1,23 @@
+<div id="bids-overlay" *ngIf="this.uiToggleService.showOverlay" >
+    <!-- <button type="button" class="overlay-close">x</button> -->
+    <app-button text="back" color="crimson" (btnClick)="closeOverlay()"></app-button>
+
+    <h2 class="overlay-title">{{this.uiToggleService.calledBy|uppercase}}</h2>  
+    <ul class="my-bids">
+       <li *ngFor="let bid of myBids">
+           <span>{{bid.pid}}</span>
+           <span>{{bid.title}}</span>
+           <span>{{bid.running_price}}/-</span>
+        </li>
+
+       <!-- <li *ngFor="let bid of bids">
+        <a routerLink="/detail/{{bid.pid}}">     
+            <span class="badge">{{bid.pid}}</span>
+            <span class="name">{{bid.title}}</span>
+            <span class="price">{{bid.running_price}}</span>
+        </a>
+        <button type="button" class="delete" title="delete bid"
+        (click)="delete(bid)">x</button>
+        </li> -->
+    </ul>
+</div>

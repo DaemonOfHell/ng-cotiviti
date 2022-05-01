@@ -1,0 +1,25 @@
+.stat-card{
+    /* width: 200px; */
+    /* height: 200px; */ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:skyblue; */
+    border-radius: 30px;
+    cursor: pointer;
+}
+.stat-card:hover{
+    transform: scale(1.01);
+}
+
+.overall-stat{
+    font-size: 5rem;
+}
+
+.stat-desc{
+    font-size: 2rem;
+    padding: 0 .5rem;
+    background-color: #000;
+    color: #fff;
+}

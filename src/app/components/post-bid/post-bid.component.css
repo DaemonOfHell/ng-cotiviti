@@ -1,0 +1,48 @@
+form.post-form{
+    border: 1px solid darkslategray;
+    width: 30%;
+    padding: 1rem;
+    border-radius: 6px;
+    position: relative;
+    background-color:teal;  
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 10%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+form.post-form h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    color: aliceblue;
+}
+
+form.post-form .form-control{
+    /* border: 1px solid darkslategray; */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 10px 0; 
+}
+.form-control label{
+    font-size: 14px;  
+    color: white;
+}
+.form-control input[type="text"]{
+    padding: 8px 13px;
+    font-size: 17px;
+    /* margin:.4rem .8rem; */
+}
+
+input[value="Start Auction"]{ 
+    padding: 10px 15px;
+    margin-top: 1rem;  
+    margin-right: 1rem !important;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 2px 2px 3px darkslategray;
+    border-radius: 30px;
+    font-weight: 700;
+    color: gray;
+}

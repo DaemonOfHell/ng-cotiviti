@@ -1,0 +1,131 @@
+/* HeroesComponent's private CSS styles */
+ul.heroes {
+  /* margin: 0 0 2em 0; */
+  list-style-type: none;
+  padding: 0;
+  /* width: 15em; */
+  width: fit-content;
+  margin: 0 auto;
+}
+
+ul.heroes h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+input#new-hero {
+  display: block;
+  width: 30%;
+  padding: .5rem;
+  margin: 1rem 0;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.heroes #bids-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heroes li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px; 
+  /* padding: 24px 0; */
+  border: 1px solid black;
+}
+
+.heroes li:hover {
+  left: .1em;
+}
+
+.heroes a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  /* margin: .5em;
+  padding: .3em 0; */
+  /* height: 1.6em; */
+  border-radius: 4px;
+  /* display: block; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a span.name{
+  /* border: 1px solid firebrick; */
+  text-align: left;
+  width: 63%; 
+}
+/* 
+.heroes a span{
+  position: relative;
+  display: inline-block;
+  height: 100%;
+} */
+
+.heroes a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.heroes a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.heroes .badge { 
+  font-size: small;
+  color: white; 
+  background-color: #405061; 
+  width: 14%;
+  height: 100%;
+  text-align: center; 
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroes .price{
+  font-weight: 600;
+  color: green;
+  padding-right: 20px; 
+}
+
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #42545C;
+}
+
+button.delete {
+  /* position: absolute; */
+  /* left: 210px; */
+  /* top: 5px; */
+  background-color: white;
+  color:  #525252;
+  font-size: 1.1rem;
+  position: absolute;
+  right: -5rem;
+  /* display: flex;  */
+  /* border: 1px solid firebrick; */
+  /* margin: 0; */
+  /* padding: 1px 10px 3px 10px; */
+}
+
+button.delete:hover {
+  background-color: #525252;
+  color: white;
+}

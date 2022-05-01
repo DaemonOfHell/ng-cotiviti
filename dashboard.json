@@ -1,0 +1,84 @@
+{
+  "my-bids": {
+      "posted_bids": [
+        {
+          "pid": 11,
+          "title": "iPhone13",
+          "running_price": 1000
+        },
+        {
+          "pid": 13,
+          "title": "amazfit band 7",
+          "running_price": 2300
+        },
+        {
+          "pid": 14,
+          "title": "wooden comb",
+          "running_price": 660
+        },
+        {
+          "pid": 15,
+          "title": "amul macho",
+          "running_price": 41
+        },
+        {
+          "pid": 16,
+          "title": "LG pizza cutter",
+          "running_price": 11
+        },
+        {
+          "pid": 17,
+          "title": "Tesla Cyber-Truck",
+          "running_price": 245
+        },
+        {
+          "pid": 18,
+          "title": "Yamaha F-310 guitar",
+          "running_price": 667
+        },
+        {
+          "pid": 19,
+          "title": "roland y-70 keyboard",
+          "running_price": 90
+        },
+        {
+          "pid": 20,
+          "title": "Pitbull puppy",
+          "running_price": 1000
+        },
+        {
+          "title": "phillips trimmer",
+          "running_price": 1000,
+          "pid": 21
+        } 
+      ],
+      "sold_bids": [
+          {
+            "pid": 11,
+            "title": "iPhone13",
+            "running_price": 1000
+          },
+          {
+            "pid": 13,
+            "title": "amazfit band 7",
+            "running_price": 2300
+          },
+          {
+            "pid": 14,
+            "title": "wooden comb",
+            "running_price": 660
+          },
+          {
+            "pid": 15,
+            "title": "amul macho",
+            "running_price": 41
+          },
+          {
+            "pid": 16,
+            "title": "LG pizza cutter",
+            "running_price": 11
+          } 
+        ],
+      "won_bids":[]
+  }
+}
