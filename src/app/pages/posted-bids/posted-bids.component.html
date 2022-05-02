@@ -1,0 +1,40 @@
+<div class="posted-bids-wrapper">
+    <div class="item-desc">
+        <div class="item-img">
+            <i class="fa fa-car" aria-hidden="true"></i>
+        </div>
+        <div class="item-detail">
+            <h2 class="item-title">
+                Tesla Car
+            </h2>
+            <h4 class="pid">#123</h4>
+            <h4 class="starting_price">Rs.100</h4>
+        </div>
+        
+    </div>
+    <div class="bids-list">
+        <h1 class="page-heading">All Bids</h1>    
+
+        <div class="list-heading-3">
+                <h3 class="badge">bid</h3>
+                <h3 class="title">title</h3>
+                <h3 class="price">running_price</h3>
+        </div>
+        <ol class="offers-for-post"> 
+            <li *ngFor="let bid of offers">
+                <button type="button" class="reject-btn" title="reject bid"> 
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <div class="bid-item"> 
+                    <span class="badge">{{bid.pid}}</span>
+                    <span class="title">{{bid.title}}</span>
+                    <span class="price">{{bid.running_price}}./-</span>
+                </div>
+                <button type="button" class="accept-btn" title="accept bid"> 
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                </button>
+            </li>
+        </ol>
+
+    </div>
+</div>

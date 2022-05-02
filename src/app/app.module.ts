@@ -22,6 +22,10 @@ import { AdminDashboardSummaryComponent } from './components/admin-dashboard-sum
 import { AllUsersComponent } from './pages/all-users/all-users.component';
 import { AllBidsComponent } from './pages/all-bids/all-bids.component';
 import { CreateUserFormComponent } from './components/create-user-form/create-user-form.component';
+import { AllBidsPageComponent } from './pages/all-bids-page/all-bids-page.component';
+import { BidFormComponent } from './components/overlays/bid-form/bid-form.component';
+import { PostedBidsComponent } from './pages/posted-bids/posted-bids.component';
+import { AppliedBidsComponent } from './pages/applied-bids/applied-bids.component'; 
 
 @NgModule({
   declarations: [
@@ -42,7 +46,11 @@ import { CreateUserFormComponent } from './components/create-user-form/create-us
     AdminDashboardSummaryComponent,
     AllUsersComponent,
     AllBidsComponent,
-    CreateUserFormComponent
+    CreateUserFormComponent,
+    AllBidsPageComponent,
+    BidFormComponent,
+    PostedBidsComponent,
+    AppliedBidsComponent 
   ],
   imports: [
     BrowserModule,

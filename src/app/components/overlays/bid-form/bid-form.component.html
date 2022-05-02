@@ -1,0 +1,17 @@
+ <form class="bid-form" (ngSubmit)="submitBid()" *ngIf="showSelf">
+    <div class="form-control">
+        <label for="pid">pid:</label>
+        <input name="pid" id="pid" type="text" [(ngModel)]="pid" placeholder="post id">
+    </div>
+    <div class="form-control">
+        <label for="uid">uid:</label>
+        <input name="uid" id="uid" type="text" [(ngModel)]="uid" placeholder="user id">
+    </div>
+    <div class="form-control">
+        <label for="offer">offered_price:</label>
+        <input type="text" name="offer" [(ngModel)]="offered_price" id="offer"  placeholder="your offer">
+    </div>
+ 
+    <input type="submit" value="publish bid" class="btn">
+    <input type="button" value="cancel" class="btn" (click)="toggleSelf()">
+</form>

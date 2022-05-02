@@ -1,9 +1,9 @@
 <p [ngStyle]="{'text-align': 'center','margin-bottom': '2rem','text-decoration': 'underline','font-size': '1rem'}">overall stats</p>
 <div class="stats-bar">
-    <a routerLink="/all-users">
+    <a routerLink="/admin/all-users">
         <app-summary-card [statTitle]="totalUsersTitle" [stat]="totalUsersStat" [ngStyle]="{'margin':'0 2rem'}"></app-summary-card>
     </a>
-    <a routerLink="/all-bids">
+    <a routerLink="/admin/all-bids">
         <app-summary-card [statTitle]="totalBidsTitle" [stat]="totalBidsStat" [ngStyle]="{'margin':'0 2rem'}"></app-summary-card>
     </a> 
 </div>

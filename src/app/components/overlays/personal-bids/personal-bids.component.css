@@ -35,3 +35,7 @@ ul.my-bids li span{
 #bids-overlay h2.overlay-title{
     margin-bottom: 3rem;
 }
+
+ul.my-bids li span:last-child{
+    padding-right: 1rem;
+}

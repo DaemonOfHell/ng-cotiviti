@@ -1,0 +1,132 @@
+.posted-bids-wrapper{
+    background-color: #e6e6e6;
+    margin-top: 0 !important;
+    /* position: absolute; */
+    /* top: 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-desc{
+    width: 45vw;
+    height: 100vh;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item-desc .item-img{
+    font-size: 10rem;
+}
+
+.item-desc .item-detail{
+    text-align: center;
+}
+
+.item-desc .item-title{
+    font-size: 3rem;
+}
+
+
+.bids-list{
+    padding: 0 4rem 0 2rem;
+    width: 53vw;
+    height: 100vh;
+    overflow-y: scroll;
+    /* display: inline-block; */
+}
+
+h1.page-heading{
+    /* text-align: center; */
+    margin: 2rem 0; 
+}
+
+.list-heading-3{
+    width: 90%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.list-heading-3 h3{
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+ol.offers-for-post{
+    width: 90%;
+    margin: 0 auto; 
+}
+
+ol.offers-for-post li {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+    border: 1px solid black;
+    height: 2.4rem; 
+    margin: 1rem 0;
+}
+
+.bid-item{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%; 
+    font-size: 1.2rem;
+    height: 100%; 
+    position: absolute;
+}
+ 
+.bid-item span.badge{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    height: 100%;
+}
+.bid-item span.title{
+    width: 50%;
+}
+.bid-item span.price{
+    width: 20%;
+    text-align: right;
+}
+
+button.reject-btn{
+    position: absolute; 
+    top: 0;
+    left: -3rem;
+    margin: 0;
+    padding: .2rem .6rem; 
+    background-color: maroon;
+    color: aliceblue;
+}
+
+button.reject-btn:hover{
+    transform: scale(1.2);
+    transition: .14s;
+}
+
+button.accept-btn{
+    position: absolute; 
+    top: 0;
+    right: -3rem;
+    margin: 0;
+    padding: .2rem .6rem; 
+    background-color: green;
+    color: aliceblue;
+}
+
+button.accept-btn:hover{
+    transform: scale(1.2);
+    transition: .14s;
+}

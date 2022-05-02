@@ -7,6 +7,9 @@ import { LoginComponent } from './pages/login/login.component';
 import {AdminDashboardComponent} from './pages/admin-dashboard/admin-dashboard.component'
 import { AllUsersComponent } from './pages/all-users/all-users.component';
 import { AllBidsComponent } from './pages/all-bids/all-bids.component';
+import { AllBidsPageComponent } from './pages/all-bids-page/all-bids-page.component';
+import { PostedBidsComponent } from './pages/posted-bids/posted-bids.component';
+import { AppliedBidsComponent } from './pages/applied-bids/applied-bids.component';
 
 const routes: Routes = [
   {
@@ -31,12 +34,24 @@ const routes: Routes = [
     component: AdminDashboardComponent
   },
   {
-    path:'all-users',
+    path:'admin/all-users',
     component: AllUsersComponent
   },
   {
-    path:'all-bids',
+    path:'admin/all-bids',
     component: AllBidsComponent
+  },
+  {
+    path:'all-bids',
+    component: AllBidsPageComponent
+  },
+  {
+    path:'posted-bids',
+    component: PostedBidsComponent
+  },
+  {
+    path:'applied-bids',
+    component: AppliedBidsComponent
   }
 ];
 

@@ -5,7 +5,7 @@ nav{
   top: 0;
   left:0;
   background-color: #3d3d3d;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 nav a{
@@ -16,6 +16,66 @@ nav a{
     padding: 14px 10px;
     border: 1px solid black;
 } 
+
+nav button#logout{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  background-color: inherit;
+  color: white;
+  /* font-size: 3rem; */
+}
+
+nav button#logout:hover{
+  font-size: 1.3rem;
+}
+
+
+nav .dd{
+  display: inline-block;
+  margin: 0;
+  top: 0;
+  position: absolute;
+  background-color:#3d3d3d;
+  /* float: left; */
+}
+nav .dd button.dd-btn{
+  margin: 0; 
+  background-color: inherit;
+  color:aliceblue;
+}
+
+
+nav a.dd-link:hover .dd{
+  display: none;
+}
+nav .dd .dd-content{
+  /* margin: 0; */
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: .2s;
+}
+
+.dd  .dd-content a{
+  display: block;
+  width: 100%; 
+  margin: 0;
+  padding: .4rem 1.2rem ;
+  border: 1px solid lightgray;
+  text-decoration: none;
+  color: white;
+}
+
+.dd a:hover{
+  background-color:darkslategray;
+}
+
+nav .dd:hover .dd-content{
+  display: block;
+}
+
 nav a#nav-brand{
   pointer-events: none;
   font-weight: 800;
