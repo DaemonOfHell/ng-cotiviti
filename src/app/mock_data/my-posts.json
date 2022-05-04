@@ -1,0 +1,24 @@
+{"my-posts":[
+    {
+        "id": 10,
+        "isSettled": false, 
+        "bid_status": "post",
+        "productName": "Antique sofa",
+        "biddingRate": 1002.0
+    },
+    {
+        "id": 21,
+        "isSettled": true, 
+        "bid_status": "post",
+        "productName": "Coffee French Press",
+        "biddingRate": 3413.0
+    },
+    {
+        "id": 11,
+        "isSettled": true, 
+        "bid_status": "post",
+        "productName": "French Bulldog",
+        "biddingRate": 8902.0
+    }
+    ]
+}

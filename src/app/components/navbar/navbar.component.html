@@ -1,0 +1,20 @@
+<nav *ngIf="loggedIn">
+    <a routerLink="#" id="nav-brand"> 
+        idder
+    </a>
+    <a routerLink="/dashboard">Dashboard</a> 
+    <div class="dd" *ngIf="isUser">
+       <button class="dd-btn">Bids 
+           <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button> 
+        <!-- <app-bids-dd></app-bids-dd> --> 
+        <div class="dd-content">
+            <a routerLink="all-posts">all posts</a>
+            <a routerLink="my-posts">posted by me</a>
+            <a routerLink="my-bids">applied by me</a>
+        </div>
+    </div>
+    <button id="logout" (click)="logOut()" *ngIf="loggedIn">
+        <i class="fa fa-sign-out" aria-hidden="true" ></i>
+    </button>
+</nav>

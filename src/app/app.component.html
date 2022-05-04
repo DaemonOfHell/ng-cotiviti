@@ -1,24 +1,8 @@
-
-<!-- <app-heroes></app-heroes> -->
-<nav>
-    <a routerLink="#" id="nav-brand">{{title | uppercase}}</a>
-    <a routerLink="/dashboard">Dashboard</a> 
-    <div class="dd">
-       <button class="dd-btn">Bids 
-           <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        </button> 
-        <!-- <app-bids-dd></app-bids-dd> --> 
-        <div class="dd-content">
-            <a routerLink="all-bids">all bids</a>
-            <a routerLink="posted-bids">postd by me</a>
-            <a routerLink="applied-bids">applied by me</a>
-        </div>
-    </div>
-    <button id="logout" *ngIf="loggedIn" (click)="logOut()">
-        <i class="fa fa-sign-out" aria-hidden="true" ></i>
-    </button>
-</nav>
+<app-navbar [title]="title"  
+>
+<!-- [loggedIn]="loggedIn" [isUser]="isUser" -->
+</app-navbar>
 
 <router-outlet></router-outlet>
-<app-messages></app-messages>
+<!-- <app-messages></app-messages> -->
 <app-footer></app-footer>

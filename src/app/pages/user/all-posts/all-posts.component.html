@@ -1,0 +1,28 @@
+<h1 class="page-heading">All Posts</h1>    
+
+<div class="list-heading-3">
+    <h3 class="badge">PRODUCT_OWNER</h3>
+    <!-- <h3 class="badge">PRODUCT_ID</h3> -->
+    <h3 class="">PRODUCT_NAME</h3>
+    <h3 class="">PRODUCT_DESCRIPTION</h3>
+    <h3 class="">BID_STATUS</h3>  
+       
+</div>
+<ol class="all-bids-list">
+
+    <li *ngFor="let bid of allPosts">
+        <div class="bid-item">   
+            <span class="">{{bid.USER_ID}}</span>
+            <!-- <span class="">{{bid.PRODUCT_ID}}</span> -->
+            <span class="">{{bid.PRODUCT_NAME}}</span>
+            <span class="">{{bid.PRODUCT_DESCRIPTION}}</span> 
+            <span class="">{{bid.BID_STATUS}}</span> 
+            
+        </div>
+        <button type="button" class="bid" title="make bid" (click)="toggleMakeBidForm(bid.USER_ID, bid.PRODUCT_NAME, bid.PRODUCT_ID)">
+            BID
+        </button>
+    </li>
+</ol>
+
+<app-bid-form [showSelf]="showBidForm" [posterId]="posterId" [productName]="productName" [productId]="productId"></app-bid-form>

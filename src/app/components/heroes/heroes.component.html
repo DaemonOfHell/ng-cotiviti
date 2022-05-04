@@ -14,10 +14,10 @@
         <small>running for</small>
     </div>
     <li *ngFor="let bid of bids">
-        <a routerLink="/detail/{{bid.pid}}">     
-            <span class="badge">{{bid.pid}}</span>
-            <span class="name">{{bid.title}}</span>
-            <span class="price">{{bid.running_price}}</span>
+        <a routerLink="/detail/{{bid.id}}">     
+            <span class="badge">{{bid.id}}</span>
+            <span class="name">{{bid.id}}</span>
+            <span class="price">{{bid.id}}</span>
         </a>
         <button type="button" class="delete" title="delete bid"
         (click)="delete(bid)">x</button>

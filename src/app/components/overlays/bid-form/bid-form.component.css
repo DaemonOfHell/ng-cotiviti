@@ -12,6 +12,7 @@ form.bid-form{
     border-radius: 10px ;
     background-color:darkolivegreen;
     /* transform: scale(0); */
+    /* backdrop-filter: blur(3px); */
 }
 
 .btn {

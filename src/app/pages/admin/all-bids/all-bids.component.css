@@ -1,0 +1,81 @@
+h1.page-heading{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.list-heading-3{
+    width: 70%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+ 
+.list-heading-3 h3{
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: 700;
+}
+ol.all-bids-list{
+    width: 70%;
+    margin: 0 auto; 
+}
+
+ol.all-bids-list li {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;    
+    border: 1px solid black;
+    height: 2.4rem; 
+    margin: 1rem 0;
+}
+
+.bid-item{ 
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%; 
+    font-size: 1.2rem;
+    height: 100%;
+    /* padding: 2rem 0; */
+    position: absolute;
+}
+/* .bid-item span{
+    display: inline-block; 
+} */
+.bid-item span.badge{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    height: 100%;
+}
+.bid-item span.title{
+    width: 50%;
+}
+.bid-item span.price{
+    width: 20%;
+    text-align: right;
+}
+
+button.remove{
+    position: absolute;
+    height: 2.3rem;
+    top: 0;
+    right: -3rem;
+    margin: 0;
+    padding: .2rem .7rem;  
+    background-color: maroon; 
+    color: white;
+    font-family: 'Poppins';
+}
+
+button.remove:hover{
+    transform: scale(1.2);
+    transition: .14s;
+}

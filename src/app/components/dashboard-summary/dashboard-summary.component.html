@@ -1,6 +1,15 @@
     <p [ngStyle]="{'text-align': 'center','margin-bottom': '2rem','text-decoration': 'underline','font-size': '1rem'}">overall stats</p>
 <div class="stats-bar">
-<app-summary-card [statTitle]="totalPostTitle" [stat]="totalPostStat"></app-summary-card>
-<app-summary-card [statTitle]="soldTitle" [stat]="soldStat"></app-summary-card>
-<app-summary-card [statTitle]="wonTitle" [stat]="wonStat"></app-summary-card>
+
+    <a routerLink="/my-posts">
+        <app-summary-card [statTitle]="totalPostTitle" [stat]="totalPostStat"></app-summary-card>
+    </a>
+    <a routerLink="/my-solds">
+        <app-summary-card [statTitle]="soldTitle" [stat]="soldStat"></app-summary-card>
+    </a> 
+
+    <a routerLink="/my-wins">
+        <app-summary-card [statTitle]="wonTitle" [stat]="wonStat"></app-summary-card>
+    </a> 
+ 
 </div>

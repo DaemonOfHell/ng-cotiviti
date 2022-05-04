@@ -1,5 +1,11 @@
 /* DashboardComponent's private CSS styles */
 
+.user-dashboard-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 h2 {
   text-align: center;
 }
@@ -79,3 +85,18 @@ a:hover {
   padding: 1rem 0;
   margin-bottom: 3rem;
 }
+
+.my-info-section .info-tab{
+  background-color:#fff;
+  display: flex;
+  justify-content: space-between;
+  color: red;
+}
+
+/* .info-tab label{
+  display: inline-block;
+}
+
+.info-tab p{
+  display: inline-block;
+} */

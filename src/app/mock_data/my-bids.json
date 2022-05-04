@@ -1,0 +1,27 @@
+{"my-bids":[
+    {
+        "id": 10,
+        "isSettled": false, 
+        "bid_status": "offer",
+        "isAccepted":"pending",
+        "productName": "Antique sofa",
+        "biddingRate": 1002.0
+    },
+    {
+        "id": 21,
+        "isSettled": true, 
+        "bid_status": "offer",
+        "isAccepted":"no",
+        "productName": "Coffee French Press",
+        "biddingRate": 3413.0
+    },
+    {
+        "id": 11,
+        "isSettled": true, 
+        "bid_status": "offer",
+        "isAccepted":"yes",
+        "productName": "French Bulldog",
+        "biddingRate": 8902.0
+    }
+    ]
+}

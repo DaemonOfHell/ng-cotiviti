@@ -11,18 +11,19 @@ import { BidService } from 'src/app/services/bid.service';
   styleUrls: ['./personal-bids.component.css']
 })
 export class PersonalBidsComponent implements OnInit {
-  // showBidsOverlay!: boolean;
-  // sub!: Subscription
+  showMyBidsOverlay!: boolean;
+  calledBy!:string
+  sub!: Subscription
   @Input() myBids: Bid[] =[]
   @Input() title!:string
 
   // mybids: Bid[] = []
 
   constructor(
-    public uiToggleService: UiToggleService 
+    private uiToggleService: UiToggleService 
     // private dbservice: BidService
   ) {
-    // this.sub = this.uiToggleService.onToggle().subscribe(value => this.showBidsOverlay=value) 
+    this.sub = this.uiToggleService.onToggle().subscribe(value => this.showMyBidsOverlay=value) 
   }
 
   ngOnInit(): void {
@@ -37,4 +38,9 @@ export class PersonalBidsComponent implements OnInit {
   // fetchMyBids():void{
   //   this.dbservice.getBids().subscribe(bids=> this.bids = bids)
   // }
+
+  toggleShowMyBidsForm(){
+    this.showMyBidsOverlay = !this.showMyBidsOverlay
+    this.uiToggleService.toggleOverlay('') 
+  }
 }

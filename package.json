@@ -6,10 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "all-bids": "json-server --watch db.json --port 5000",
-    "my-bids": "json-server --watch dashboard.json --port 5001",
-    "all-users": "json-server --watch users.json --port 5002"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminServiceService } from 'src/app/services/admin-service.service';
 
 @Component({
   selector: 'app-admin-dashboard-summary',
@@ -6,15 +7,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dashboard-summary.component.css']
 })
 export class AdminDashboardSummaryComponent implements OnInit {
-  totalUsersTitle:string = "total users";
-  totalUsersStat:number= 10321;
+  totalUsersTitle:string = "users";
+  totalUsersStat!:number;
 
-  totalBidsTitle:string = "total bids";
-  totalBidsStat:number= 239758910;
+  totalBidsTitle:string = "bids";
+  totalBidsStat!:number;
 
-  constructor() { }
+  totalPostsTitle:string = "posts";
+  totalPostsStat!:number;
+
+  constructor(private adminService: AdminServiceService) { }
 
   ngOnInit(): void {
+    this.getUsersCount();
+    this.getBidsCount()
+    this.getPostsCount()
+  }
+
+  getUsersCount():void{
+    this.adminService.getTotalUsers()
+      .subscribe(userCount=>this.totalUsersStat=userCount);
+  }
+
+  getBidsCount():void{
+    this.adminService.getTotalBids()
+      .subscribe(userCount=>this.totalBidsStat=userCount);
+  }
+
+  getPostsCount():void{
+    this.adminService.getTotalPosts()
+      .subscribe(userCount=>this.totalPostsStat=userCount);
   }
 
 }

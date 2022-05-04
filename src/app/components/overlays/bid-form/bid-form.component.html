@@ -1,15 +1,15 @@
  <form class="bid-form" (ngSubmit)="submitBid()" *ngIf="showSelf">
     <div class="form-control">
-        <label for="pid">pid:</label>
-        <input name="pid" id="pid" type="text" [(ngModel)]="pid" placeholder="post id">
+        <label for="pid">poster Id:</label>
+        <input name="pid" id="pid" type="text" [(ngModel)]="posterId" placeholder="post id" disabled>
     </div>
     <div class="form-control">
-        <label for="uid">uid:</label>
-        <input name="uid" id="uid" type="text" [(ngModel)]="uid" placeholder="user id">
+        <label for="product-name">Product Name:</label>
+        <input name="product-name" id="product-name" type="text" [(ngModel)]="productName" placeholder="product name" disabled>
     </div>
     <div class="form-control">
-        <label for="offer">offered_price:</label>
-        <input type="text" name="offer" [(ngModel)]="offered_price" id="offer"  placeholder="your offer">
+        <label for="offer">offered price:</label>
+        <input type="text" name="offer" [(ngModel)]="offeredPrice" id="offer"  placeholder="your offer">
     </div>
  
     <input type="submit" value="publish bid" class="btn">

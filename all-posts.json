@@ -1,0 +1,49 @@
+{"all-bids":
+    [
+        {
+            "id": 130,
+            "bid_status": "post",
+            "isSettled": null,
+            "userId": 33,
+            "productName": "Antique sofa",
+            "started_at":13,
+            "biddingRate": 1002.0,
+            "top_bids":[
+                    {"userId":12,"offered_price":1222},
+                    {"userId":1,"offered_price":1220},
+                    {"userId":3,"offered_price":1900},
+                    {"userId":42,"offered_price":1242},
+                    {"userId":52,"offered_price":1002}
+                ]
+        },
+        {
+            "id": 21,
+            "bid_status": "post",
+            "isSettled": true, 
+            "isAccepted":"no",
+            "productName": "Coffee French Press",
+            "started_at":3,
+            "biddingRate": 3413.0,
+            "top_bids":[
+                {"userId":2,"offered_price":45566},
+                {"userId":51,"offered_price":6265},
+                {"userId":783,"offered_price":3460},
+                {"userId":92,"offered_price":3434},
+                {"userId":32,"offered_price":1002}
+            ]
+        },
+        {
+            "id": 11,
+            "bid_status": "post",
+            "isSettled": true, 
+            "isAccepted":"yes",
+            "productName": "French Bulldog",
+            "started_at":90123,
+            "biddingRate": 568902.0,
+            "top_bids":[
+                {"userId":22,"offered_price":4435353535},
+                {"userId":2,"offered_price":1002}
+            ]
+        }
+    ]
+}

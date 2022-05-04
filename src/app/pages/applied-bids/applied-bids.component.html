@@ -9,10 +9,10 @@
 <ol class="all-bids-list"> 
     <li *ngFor="let bid of appliedBids">
         <div class="bid-item"> 
-            <span class="badge">{{bid.pid}}</span>
-            <span class="title">{{bid.title}}</span>
-            <span class="running_price">{{bid.running_price}}./-</span>
-            <span class="my_offer">{{bid.running_price}}./-</span>
+            <span class="badge">{{bid.id}}</span>
+            <span class="title">{{bid.id}}</span>
+            <span class="running_price">{{bid.id}}./-</span>
+            <span class="my_offer">{{bid.id}}./-</span>
         </div>
         <button type="button" class="offer-btn" title="make bid" (click)="toggleShowBidForm()"> bid</button>
     </li>

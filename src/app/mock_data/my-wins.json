@@ -1,0 +1,27 @@
+{"my-wins":[
+    {
+        "id": 10, 
+        "productId":12,
+        "productName": "Antique sofa",
+        "settledPrice": 1002.0
+    },
+    {
+        "id": 21, 
+        "productId":23,
+        "productName": "Coffee French Press",
+        "settledPrice": 3413.0
+    },
+    {
+        "id": 11, 
+        "productId":24,
+        "productName": "French Bulldog",
+        "settledPrice": 8902.0
+    },
+    {
+        "id": 29, 
+        "productId":6,
+        "productName": "CS-50 Book",
+        "settledPrice": 82.0
+    }
+    ]
+}

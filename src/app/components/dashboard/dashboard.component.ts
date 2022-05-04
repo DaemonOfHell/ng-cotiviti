@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Bid } from 'src/app/bid'; 
 import { BidService } from 'src/app/services/bid.service';
+import { UiToggleService } from 'src/app/services/ui-toggle.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,18 +11,45 @@ import { BidService } from 'src/app/services/bid.service';
 })
 export class DashboardComponent implements OnInit {
   myBids: Bid[] = []
+  
+  myId!: string 
+  myName!: string  
+  myRoles!: string  
 
-  myName: string = "Mr. User Prasad"
-  accType: string = "general user"
-  email: string = "ex@gmail.com"
+  showBidForm: boolean = false;  
+  // sub!:Subscription
 
-  constructor(private heroService: BidService) { }
+  constructor(
+    // private bidService: BidService, private uiService: UiToggleService
+    ) { 
+    // this.sub = uiService.onToggle().subscribe(value => this.showBidForm = value)
+  }
+ 
 
   ngOnInit(): void {
-    this.getHeroes();
+    // this.getHeroes();
+    this.fillMyInfo()
   }
 
-  getHeroes(): void{
-    this.heroService.getBids().subscribe(bids=>this.myBids= bids.slice(0,5))
-  }
+  // getHeroes(): void{
+  //   this.heroService.getBids().subscribe(bids=>this.myBids= bids.slice(0,5))
+  // }
+  
+    fetchStats():void{ 
+    }
+
+    fillMyInfo():void{ 
+      const myInfo = JSON.parse(sessionStorage.getItem('userInfo')||'{}')
+      this.myId = myInfo?.userId
+      this.myName = myInfo?.username
+      this.myRoles = myInfo?.roles.join(', ')
+    }
+
+    toggleShowBidCreateForm(){
+      this.showBidForm = !this.showBidForm
+      // this.uiService.toggleOverlay('') 
+    }
 }
+ 
+
+

@@ -2,15 +2,19 @@
 
 <div class="list-heading-3">
         <h3 class="badge">bid</h3>
-        <h3 class="title">title</h3>
-        <h3 class="price">running_price</h3>
+        <h3 class="">status:type</h3>
+        <h3 class="">status:settled</h3>
+        <h3 class="">publisher-id</h3> 
+        <h3 class="">product-id</h3>  
+        <h3 class="">running-at</h3>  
+
 </div>
 <ol class="all-bids-list"> 
     <li *ngFor="let bid of allBids">
         <div class="bid-item"> 
-            <span class="badge">{{bid.pid}}</span>
-            <span class="title">{{bid.title}}</span>
-            <span class="price">{{bid.running_price}}./-</span>
+            <span class="badge">{{bid.id}}</span>
+            <span class="title">{{bid.id}}</span>
+            <span class="price">{{bid.biddingRate}}./-</span>
         </div>
         <button type="button" class="offer-btn" title="make bid" (click)="toggleShowBidForm()"> bid</button>
     </li>

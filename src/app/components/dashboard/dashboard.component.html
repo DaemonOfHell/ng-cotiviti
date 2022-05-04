@@ -1,4 +1,10 @@
-<h2 id="dashboard-heading">{{myName}} | {{"Dashboard"|uppercase}} </h2>
+<div class="user-dashboard-header">
+    <h2 id="dashboard-heading">{{myName}} | {{"Dashboard"|uppercase}} </h2>
+    <button type="button" (click)="toggleShowBidCreateForm()">start a new auction</button> 
+</div>
+
+<app-create-bid-form [showSelf]="showBidForm"></app-create-bid-form>
+
 <div class="my-info-section">
      <div class="info-tab">
          <label for="full-name">name: </label>
@@ -6,13 +12,13 @@
      </div>
 
      <div class="info-tab">
-        <label for="acc-type">account-type: </label>
-        <p id="acc-type">{{accType}}</p>
+        <label for="acc-id">id: </label>
+        <p id="acc-id">{{myId}}</p>
      </div>
 
      <div class="info-tab">
-        <label for="email">email: </label>
-        <p id="email">{{email}}</p>
+        <label for="roles">roles: </label>
+        <p id="roles">{{myRoles}}</p>
      </div>
 </div>
  

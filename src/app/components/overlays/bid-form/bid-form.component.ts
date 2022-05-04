@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { PostBid } from 'src/app/mock_data/post-bid';
+import { AllPostsService } from 'src/app/services/all-posts.service';
 import { UiToggleService } from 'src/app/services/ui-toggle.service';
 import { BidRequest } from 'src/bid-request';
 
@@ -10,13 +12,17 @@ import { BidRequest } from 'src/bid-request';
 })
 export class BidFormComponent implements OnInit {
   @Input() showSelf:boolean = false;
-  pid!:number
-  uid!:number
-  offered_price!:number
+  @Input() posterId!:number
+  @Input() productId!:number
+  @Input() productName!:string
+  bid_status:string = 'offer'
+  isSettled?:boolean = false;
 
+  offeredPrice!:number
+   
   sub!:Subscription
 
-  constructor(private uiService: UiToggleService) { 
+  constructor(private uiService: UiToggleService, private allPostsService: AllPostsService) { 
       this.sub = uiService.onToggle().subscribe(value => this.showSelf = value)
   }
 
@@ -24,13 +30,19 @@ export class BidFormComponent implements OnInit {
   }
 
   submitBid(){
-    const newBidOffer:BidRequest = {
-    pid: this.pid,
-    uid: this.uid,
-    offered_price: this.offered_price
+    const newBidOffer:PostBid = {
+      product_id: this.productId,
+      bid_status: this.bid_status,
+      isSettled:this.isSettled,
+      userId:this.posterId,
+      productName:this.productName,
+      biddingRate: this.offeredPrice
+ 
   }
 
-    console.log(newBidOffer);
+    // console.log(newBidOffer);
+    // newBidOffer.productId=
+    this.allPostsService.createNewPost(newBidOffer).subscribe(newPost=>console.log(newPost) )
     
   } 
 

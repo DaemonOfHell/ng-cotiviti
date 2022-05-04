@@ -1,0 +1,19 @@
+<form class="create-bid-form" (ngSubmit)="submitPost()" *ngIf='showSelf'>
+    <div class="form-control">
+       <span id="item_img">
+        <i class="fa-solid fa-car"></i> 
+       </span>
+       <div class="file-upload-btn">upload image</div>
+    </div>
+    <div class="form-control">
+        <label for="item_title">item title:</label>
+        <input name="item_title" id="item_title" type="text" [(ngModel)]="item_title" placeholder="user id">
+    </div>
+    <div class="form-control">
+        <label for="starting_price">starting price:</label>
+        <input type="text" name="starting_price" [(ngModel)]="starting_price" id="starting_price"  placeholder="your starting price">
+    </div>
+ 
+    <input type="submit" value="create bid" class="btn submit">
+    <input type="button" value="cancel" class="btn cancel" (click)="toggleSelf()">
+</form>

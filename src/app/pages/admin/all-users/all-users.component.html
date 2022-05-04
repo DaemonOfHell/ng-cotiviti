@@ -1,0 +1,33 @@
+<div class="all-users-header">
+    <h1 class="page-heading">All Users</h1>    
+    <app-button 
+        text="{{showUserForm?'cancel':'create user'}}" 
+        color="{{showUserForm?'crimson':'darkgreen'}}" 
+        (btnClick)="toggleForm()" 
+    >    
+    </app-button>
+</div>
+
+<app-create-user-form (onUserAdded)="addUser($event)" *ngIf="showUserForm"></app-create-user-form>
+
+
+<div class="list-heading-3">
+        <h3 class="badge">id</h3>
+        <h3 class="name">name</h3>
+        <h3 class="role">role(s)</h3>
+</div>
+<ol class="all-users-list">
+
+    <li *ngFor="let user of allUsers">
+        <div class="user-item"> 
+            <span class="badge">{{user.USER_ID}}</span>
+            <span class="name">{{user.USERNAME}}</span>
+            <span class="role">{{user.ROLE}}</span>
+        </div>
+        <button type="button" class="remove" title="remove user"
+        (click)="removeUser(user)">
+        
+        <i class="fa-solid fa-trash-can"></i>
+        </button>
+    </li>
+</ol>

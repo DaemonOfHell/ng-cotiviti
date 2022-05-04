@@ -1,11 +1,9 @@
-nav{
+/* nav{
   display: block;
-  width: 100%;
-  /* position: absolute; */
+  width: 100%; 
   top: 0;
   left:0;
-  background-color: #3d3d3d;
-  /* margin-bottom: 60px; */
+  background-color: #3d3d3d; 
 }
 
 nav a{
@@ -23,8 +21,7 @@ nav button#logout{
   top: 0;
   margin: 0;
   background-color: inherit;
-  color: white;
-  /* font-size: 3rem; */
+  color: white; 
 }
 
 nav button#logout:hover{
@@ -37,8 +34,7 @@ nav .dd{
   margin: 0;
   top: 0;
   position: absolute;
-  background-color:#3d3d3d;
-  /* float: left; */
+  background-color:#3d3d3d; 
 }
 nav .dd button.dd-btn{
   margin: 0; 
@@ -50,8 +46,7 @@ nav .dd button.dd-btn{
 nav a.dd-link:hover .dd{
   display: none;
 }
-nav .dd .dd-content{
-  /* margin: 0; */
+nav .dd .dd-content{ 
   display: none;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -88,4 +83,4 @@ nav a:hover {
 }
 nav a.active {
   background-color: black;
-}
+} */

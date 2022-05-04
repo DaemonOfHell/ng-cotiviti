@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 // import { catchError, map, tap } from 'rxjs/operators';
-import { Bid } from '../bid'; 
-import { MessageService } from './message.service';
+import { Bid } from '../bid';  
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
  
@@ -10,7 +9,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BidService {
-  private apiUrl = 'http://localhost:5000/bids'
+  private apiUrl = 'http://localhost:8080'
+  private admin = 'admin'
+  private allBids = 'findAllBids'
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -19,25 +20,21 @@ export class BidService {
   } 
 
   constructor(
-    private http: HttpClient,    
-    private msgService: MessageService
+    private http: HttpClient,     
     ) { }
 
   getBids(): Observable<Bid[]>{ 
-    return this.http.get<Bid[]>(this.apiUrl) 
+    const token = sessionStorage.getItem('token')
+    return this.http.get<Bid[]>(`${this.apiUrl}/${this.admin}/${this.allBids}`,{ headers: { 'Authorization': 'Basic ' + token } }) 
   }
   
-  getBid(pid: number):Observable<Bid>{ 
-    // const url = `${this.apiUrl}/?pid=${pid}`
+  getBid(pid: number):Observable<Bid>{  
     const url = `${this.apiUrl}/${pid}`
-    return this.http.get<Bid>(url)
-    // .pipe(
-    //   catchError(this.handleError<Bid>('getBids'))
-    // );
+    return this.http.get<Bid>(url) 
   }
   
-  updateBid(bid: Bid): Observable<Bid>{
-    const url=`${this.apiUrl}/${bid.pid}`
+  updateBid(bid: Bid): Observable<Bid>{ 
+    const url=`${this.apiUrl}/${bid.id}`
     return this.http.put<Bid>(url, bid, this.httpOptions)
   }
 
@@ -55,16 +52,7 @@ export class BidService {
     if(!term.trim()) return of([])
     return this.http.get<Bid[]>(`${this.apiUrl}/?title=${term}`)
   }
-
-  // getSuggestions(term: string):Observable<Hero[]>{
-  //   if(!term.trim()) return
-  //   return this.http.get<Hero[]>(`${this.apiUrl}/?name=`)
-  // }
-
-  private log(msg: string){
-    this.msgService.add(`BidService: ${msg}`)
-  }
-
+ 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
   
@@ -72,7 +60,7 @@ export class BidService {
       console.error(error); // log to console instead
   
       // TODO: better job of transforming error for user consumption
-      this.log(`${operation} failed: ${error.message}`);
+      // this.log(`${operation} failed: ${error.message}`);
   
       // Let the app keep running by returning an empty result.
       return of(result as T);

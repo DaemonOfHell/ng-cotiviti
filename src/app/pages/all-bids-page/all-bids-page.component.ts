@@ -11,8 +11,7 @@ import { UiToggleService } from 'src/app/services/ui-toggle.service';
 })
 export class AllBidsPageComponent implements OnInit {
   allBids: Bid[] = []
-  showBidForm: boolean = false; 
-  // subject!: Subject<any>
+  showBidForm: boolean = false;  
   sub!:Subscription
 
   constructor(private bidService: BidService, private uiService: UiToggleService) { 

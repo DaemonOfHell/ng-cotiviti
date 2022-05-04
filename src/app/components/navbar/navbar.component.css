@@ -1,0 +1,118 @@
+nav{
+    display: block;
+    width: 100%;
+    /* position: absolute; */
+    top: 0;
+    left:0;
+    background-color: #3d3d3d;
+    /* margin-bottom: 60px; */
+    position: relative;
+  }
+  
+  nav a{
+      display: inline-block; 
+      text-decoration: none;
+      margin: 0 10px;
+      color: white;
+      padding: 14px 10px;
+      border: none; 
+  } 
+  
+  nav button#logout{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    background-color: transparent;
+    color: white;
+    transition: .1s cubic-bezier(); 
+  }
+  
+  nav button#logout:hover{
+    font-size: 1.3rem;
+    background-color: gray;
+  }
+  
+  
+  nav .dd{
+    display: inline-block;
+    margin: 0; 
+    top: 0;
+    height: 100%;
+    position: relative;
+    background-color:#3d3d3d;
+    /* float: left; */
+  }
+  nav .dd button.dd-btn{
+    font-size: 1rem;
+    margin: 0; 
+    background-color: inherit;
+    color:aliceblue;
+    font-family: 'Poppins';
+  }
+  nav .dd button.dd-btn:hover{
+    background-color: gray;
+  }
+
+  .dd-btn i{
+    padding-left: .3rem;
+    font-size: 12px;
+  }
+  
+  nav a.dd-link:hover .dd{
+    display: none;
+  }
+  nav .dd .dd-content{
+    /* margin: 0; */
+    position: absolute;
+    width: 10rem;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: .2s;
+    border: none;
+    border-radius: 0 0 0 23px;
+    background-color:royalblue;
+  }
+  
+  .dd  .dd-content a{
+    display: block;
+    width: 100%; 
+    margin: 0;
+    padding: .4rem 1.2rem ;
+    /* border: 1px solid rgba(0,0,0,0.2);  */
+    text-decoration: none;
+    color: white;
+  }
+  
+  .dd a:hover{
+    background-color:darkslategray;
+  }
+  
+  nav .dd:hover .dd-content{
+    display: block;
+  }
+  
+  nav a#nav-brand{
+    pointer-events: none; 
+    width: 7rem;
+    height: 100%;
+    position: absolute;  
+    background-image: url(./assets/logo2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:left;
+    letter-spacing: 2px;  
+    font-size: 1.2rem;
+    left: 50%;
+    text-align: right;
+    transform: translateX(-90%);
+  }
+   
+  nav a:hover {
+    color: white;
+    background-color: gray;
+  }
+  nav a.active {
+    background-color: black;
+  }

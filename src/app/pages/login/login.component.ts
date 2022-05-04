@@ -9,22 +9,26 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   loginUserData: LoginData ={
-    email:'',
+    username:'',
     password:''
   }
 
-  constructor(private _auth: AuthService) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  loginUser(){
-    // this._auth.loginUser(this.loginUserData)
-    //   .subscribe(loginCredentials=>this.loginUserData=loginCredentials)
-    console.log(this.loginUserData);
-    if(this.loginUserData.email=="a@a.com" 
-      && this.loginUserData.password=="a"){
-        
-      }
+  onSubmit(){ 
+   
+    if(!this.loginUserData.username){
+      alert("username is empty")
+      return
+    }
+    if(!this.loginUserData.password || this.loginUserData.password.length<1){
+      alert("password is empty")
+      return
+    }
+    //  console.log(this.loginUserData); 
+    this.authService.loginUser(this.loginUserData)
   }
 }

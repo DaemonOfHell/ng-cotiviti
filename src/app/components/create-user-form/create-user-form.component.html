@@ -1,15 +1,18 @@
 <form class="add-form" (ngSubmit)="onSubmit()">
     <div class="form-control">
-        <label for="name">Name:</label>
-        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="user's full name">
+        <label for="name">User name:</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="user name">
     </div>
     <div class="form-control">
-        <label for="email">Email:</label>
-        <input type="text" name="email" [(ngModel)]="email" id="email" placeholder="email">
+        <label for="password">password:</label>
+        <input type="text" name="password" [(ngModel)]="password" id="password" placeholder="password">
     </div>
     <div class="form-control">
-        <label for="password">Password:</label>
-        <input type="text" name="password" [(ngModel)]="password" id="password"  placeholder="set a password">
+        <label for="role">role:</label>
+        <select name="role" [(ngModel)]="role" id="role"> 
+            <option value="ADMIN">admin</option>
+            <option value="USER">user</option>
+        </select>
     </div>
  
     <input type="submit" value="create user" class="btn btn-block">
