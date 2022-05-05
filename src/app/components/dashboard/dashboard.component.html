@@ -1,6 +1,7 @@
 <div class="user-dashboard-header">
-    <h2 id="dashboard-heading">{{myName}} | {{"Dashboard"|uppercase}} </h2>
-    <button type="button" (click)="toggleShowBidCreateForm()">start a new auction</button> 
+    <h2 id="dashboard-heading">{{myName}} | {{"Dashboard"|lowercase}} </h2>
+    <!-- <app-button text="start" color="gray" (btnClick)="togglShowBidCreateForm()"></app-button> -->
+    <button type="button" (click)="toggleShowBidCreateForm()">{{btnText}}</button> 
 </div>
 
 <app-create-bid-form [showSelf]="showBidForm"></app-create-bid-form>

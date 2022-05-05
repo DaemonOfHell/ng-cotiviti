@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   myId!: string 
   myName!: string  
   myRoles!: string  
+  btnText:string='start a new auction'
 
   showBidForm: boolean = false;  
   // sub!:Subscription
@@ -47,9 +48,7 @@ export class DashboardComponent implements OnInit {
 
     toggleShowBidCreateForm(){
       this.showBidForm = !this.showBidForm
-      // this.uiService.toggleOverlay('') 
+      this.btnText= this.showBidForm?'cancel':'start a new auction'
     }
-}
  
-
-
+}

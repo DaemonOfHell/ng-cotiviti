@@ -72,7 +72,8 @@ nav{
     transition: .2s;
     border: none;
     border-radius: 0 0 0 23px;
-    background-color:royalblue;
+    background-color: darkslategrey;
+    ;
   }
   
   .dd  .dd-content a{
@@ -86,7 +87,7 @@ nav{
   }
   
   .dd a:hover{
-    background-color:darkslategray;
+    background-color:gray;
   }
   
   nav .dd:hover .dd-content{

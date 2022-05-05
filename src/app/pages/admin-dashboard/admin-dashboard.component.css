@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap');
+
+
 h2 {
     text-align: center;
   }
@@ -8,23 +11,25 @@ h2 {
   }
   
   .my-info-section{
-    background-color:aliceblue;
+    font-size: 1.3rem;
     padding: 1rem 0;
     margin-bottom: 3rem;
+    
   }
-
-  .info-tab{
+  .my-info-section .info-tab{ 
+    width: 30%;
+    margin: 0 auto; 
+    color:olivedrab;
     display: flex;
-    justify-content: center;
-    margin: 4px 0;
+    justify-content: center; 
   }
   
   .info-tab label{
-    font-weight: 600;
-    color:slategrey;
+    font-weight: 300;
+    color:black;
     margin-right: 10px;
   }
   
   .info-tab p{
-    font-size: 19px;
+    font-weight: 600;
   }

@@ -7,6 +7,8 @@
     margin: 0rem auto;
     position: relative;
     box-shadow: 5px 3px 5px gray;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .form-control{

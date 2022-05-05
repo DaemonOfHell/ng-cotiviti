@@ -1,9 +1,13 @@
 /* DashboardComponent's private CSS styles */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500&display=swap');
 
 .user-dashboard-header{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.user-dashboard-header button{
+  width: 9rem;
 }
 
 h2 {
@@ -57,40 +61,40 @@ a {
 
 a:hover {
   background-color: black;
-}
-
-.info-tab{
-  display: flex;
-  justify-content: center;
-  margin: 4px 0;
-}
+} 
 
 .info-tab label{
-  font-weight: 600;
-  color:slategrey;
+  font-weight: 300;
+  color:black;
   margin-right: 10px;
 }
 
 .info-tab p{
-  font-size: 19px;
+  font-weight: 600;
 }
 
 #dashboard-heading{
   margin: 5rem 0;
-  color: slategray;
+  color:teal;
+  font-weight: 100;
+  font-family: 'Pacifico';
 }
 
 .my-info-section{
-  background-color:aliceblue;
+  /* background: linear-gradient(90deg, rgba(186,184,232,1) 6%, rgba(90,89,152,1) 28%, rgba(59,59,126,1) 35%, rgba(25,148,201,1) 73%, rgba(0,212,255,1) 100%); */
+ 
+  font-size: 1.3rem;
   padding: 1rem 0;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; 
 }
 
-.my-info-section .info-tab{
-  background-color:#fff;
+.my-info-section .info-tab{ 
+  width: 30%;
+  margin: 0 auto; 
+  color:olivedrab;
   display: flex;
-  justify-content: space-between;
-  color: red;
+  justify-content: center;
+  /* margin: 4px 0; */
 }
 
 /* .info-tab label{
