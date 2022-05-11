@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesComponent } from './components/heroes/heroes.component'; 
+// import { HeroesComponent } from './components/heroes/heroes.component'; 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 // import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -18,10 +18,10 @@ import { MyPostsComponent } from './pages/user/my-posts/my-posts.component';
 import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';
 
 const routes: Routes = [
-  {
-    path:'bids',
-    component: HeroesComponent
-  },
+  // {
+  //   path:'bids',
+  //   component: HeroesComponent
+  // },
   {
     path:'dashboard',
     component: DashboardComponent,

@@ -21,14 +21,15 @@ export class LoginComponent implements OnInit {
   onSubmit(){ 
    
     if(!this.loginUserData.username){
-      alert("username is empty")
+      alert("username is empty :(")
       return
     }
     if(!this.loginUserData.password || this.loginUserData.password.length<1){
-      alert("password is empty")
+      alert("password is empty :(")
       return
     }
     //  console.log(this.loginUserData); 
     this.authService.loginUser(this.loginUserData)
+    // this.authService.updateNav.next()
   }
 }

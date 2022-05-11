@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'; 
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Router } from '@angular/router'; 
+import { AuthService } from './services/auth.service';
 // import { Location } from '@angular/common';
 // import { Router } from '@angular/router';
 // import { LoginComponent } from './pages/login/login.component'; 
@@ -11,6 +12,36 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class AppComponent {   
   title = 'BiddingApp';  
+ 
+  // currentRole!:any
+   
+  constructor(private authService: AuthService, private router: Router){}
+
+  ngOnInit():void{
+    // this.authService.updateNav.subscribe(res=>{  
+    //   this.NavDisplay()
+    // })
+    // this.NavDisplay()
+  }
+
+  ngDoCheck():void{
+    if(this.router.url=='/login'){
+      
+    }
+  }
+
+  // NavDisplay(): void{
+    
+  //   console.log(roles);
+    
+  //   if(sessionStorage.getItem('token')){
+  //     let roles = this.authService.getRoleFromSession()
+  //     this.currentRole = roles[0]
+  //     console.log(this.currentRole); 
+  //   }else{
+  //     this.displayNav=false
+  //   }
+  // }
   // loggedInAs!:
   // loggedIn =new BehaviorSubject<boolean>(false)
   

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
+// import { HeroesComponent } from './components/heroes/heroes.component';
 // import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 // import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -30,11 +30,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateBidFormComponent } from './components/overlays/create-bid-form/create-bid-form.component';
 import { MyPostsComponent } from './pages/user/my-posts/my-posts.component';
 import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';  
+import { HeadersInterceptor } from './services/interceptors/headers.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
+    // HeroesComponent,
     // HeroDetailComponent,
     // MessagesComponent,
     DashboardComponent,
@@ -66,7 +67,9 @@ import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ 
+    {provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

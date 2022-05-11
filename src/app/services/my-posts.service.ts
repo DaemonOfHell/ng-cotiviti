@@ -29,6 +29,8 @@ export class MyPostsService {
     getMyPosts(): Observable<MyPostWithOffers[]>{ 
       let token = sessionStorage.getItem('token')
       let myId = JSON.parse(sessionStorage.getItem('userInfo')||'{}').userId
+      console.log(myId);
+      
       return this.http.get<MyPostWithOffers[]>(`${this.apiUrl}/${this.offers}/${myId}`,{ headers: { 'Authorization': 'Basic ' + token } }) 
     }
 
