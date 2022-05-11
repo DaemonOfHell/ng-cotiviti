@@ -8,7 +8,7 @@ import { BidService } from 'src/app/services/bid.service';
   styleUrls: ['./all-bids.component.css']
 })
 export class AllBidsComponent implements OnInit {
-  allBids: Bid[] = []
+  allBids: any = []
 
   constructor(private bidService: BidService) { }
 
@@ -19,7 +19,7 @@ export class AllBidsComponent implements OnInit {
   fetchAllBids():void{
     this.bidService.getBids().subscribe(bids=>{
       this.allBids=bids
-      // console.log(this.allBids); 
+      console.log(this.allBids); 
     })
   }
 
