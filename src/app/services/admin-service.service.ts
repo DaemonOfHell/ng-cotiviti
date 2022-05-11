@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { GetPost } from '../mock_data/get-post';
 import { User } from '../user';
 
 @Injectable({
@@ -11,7 +12,8 @@ export class AdminServiceService {
   private postsExt = 'totalPostedBids'
   private bidsExt = 'totalOfferBids'
   private usersExt = 'totalUsers'
-  private allUsersExt = 'showAllUsers'
+  // private allUsersExt = 'showAllUsers'
+  private allPostsExt = 'showAllPostedBids'
 
   private token = sessionStorage.getItem('token');  
   
@@ -33,7 +35,11 @@ export class AdminServiceService {
     return this.http.get<number>(this.base_api_url+this.postsExt, { headers: { 'Authorization': 'Basic ' + this.token } }) 
   }
 
-  getUsers():Observable<User[]>{
-    return this.http.get<User[]>(this.base_api_url+this.allUsersExt, { headers: { 'Authorization': 'Basic ' + this.token }})
+  // getAllUsers():Observable<User[]>{
+  //   return this.http.get<User[]>(this.base_api_url+this.allUsersExt, { headers: { 'Authorization': 'Basic ' + this.token }})
+  // }
+
+  getAllPosts():Observable<GetPost[]>{
+    return this.http.get<GetPost[]>('http://localhost:8080/'+this.allPostsExt, { headers: { 'Authorization': 'Basic ' + this.token }})
   }
 }

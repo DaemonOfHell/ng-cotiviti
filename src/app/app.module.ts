@@ -31,6 +31,7 @@ import { CreateBidFormComponent } from './components/overlays/create-bid-form/cr
 import { MyPostsComponent } from './pages/user/my-posts/my-posts.component';
 import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';  
 import { HeadersInterceptor } from './services/interceptors/headers.interceptor';
+import { AllPostsAdminComponent } from './pages/admin/all-posts-admin/all-posts-admin.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { HeadersInterceptor } from './services/interceptors/headers.interceptor'
     NavbarComponent,
     CreateBidFormComponent,
     MyPostsComponent,
-    AllPostsComponent 
+    AllPostsComponent,
+    AllPostsAdminComponent 
   ],
   imports: [
     BrowserModule,

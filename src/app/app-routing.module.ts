@@ -16,6 +16,7 @@ import { LoginGuard } from './guards/login.guard';
 import { NotuserGuard } from './guards/notuser.guard';
 import { MyPostsComponent } from './pages/user/my-posts/my-posts.component'; 
 import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';
+import { AllPostsAdminComponent } from './pages/admin/all-posts-admin/all-posts-admin.component'; 
 
 const routes: Routes = [
   // {
@@ -50,6 +51,11 @@ const routes: Routes = [
   {
     path:'admin/all-bids',
     component: AllBidsComponent,
+    canActivate: [ AdminGuard]
+  },
+  {
+    path:'admin/all-posts',
+    component: AllPostsAdminComponent,
     canActivate: [ AdminGuard]
   },
   {

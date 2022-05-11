@@ -28,7 +28,6 @@ export class AuthService {
   // }
   
 
-  /** no interceptor valid for login (bcoz token is absent in session at first)?? */
       loginUser(userdata:LoginData){   
         const username = userdata.username
         const password = userdata.password

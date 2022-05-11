@@ -1,0 +1,24 @@
+<div class="all-posts-header">
+    <h1 class="page-heading">All Posts</h1>  
+</div>
+
+<div class="list-heading-3">
+    <h3 class="badge">user id</h3>
+    <h3 >product id</h3>
+    <h3 >product name</h3>
+    <h3>product description</h3>
+</div>
+<ol class="all-posts-list">
+
+<li *ngFor="let post of allPosts">
+    <div class="user-item"> 
+        <span class="badge">{{post.USER_ID}}</span>
+        <span>{{post.PRODUCT_ID}}</span>
+        <span>{{post.PRODUCT_NAME}}</span>
+        <span>{{post.PRODUCT_DESCRIPTION}}</span> 
+    </div>
+    <button type="button" class="remove" title="remove post" > 
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+</li>
+</ol>
