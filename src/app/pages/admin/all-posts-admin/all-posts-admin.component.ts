@@ -9,7 +9,7 @@ import { AdminServiceService } from 'src/app/services/admin-service.service';
 })
 export class AllPostsAdminComponent implements OnInit {
 
-  allPosts:GetPost[]=[]
+  allPosts:any=[]
 
   constructor(private adminService: AdminServiceService) { }
 
