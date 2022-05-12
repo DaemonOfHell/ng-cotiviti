@@ -25,9 +25,7 @@ export class BidService {
 
   getBids(): Observable<Bid[]>{ 
     const token = sessionStorage.getItem('token')
-    return this.http.get<Bid[]>(`${this.apiUrl}/${this.admin}/${this.allBids}`
-    ,{ headers: { 'Authorization': 'Basic ' + token } }
-    ) 
+    return this.http.get<Bid[]>(`${this.apiUrl}/${this.admin}/${this.allBids}`) 
   }
   
   // getBid(pid: number):Observable<Bid>{  

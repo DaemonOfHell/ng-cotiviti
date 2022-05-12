@@ -25,13 +25,13 @@ export class AllPostsService {
 
   getAllPosts(): Observable<GetPost[]>{ 
     const token = sessionStorage.getItem('token')
-    return this.http.get<GetPost[]>(this.apiUrl+"/"+this.allPosts,{ headers: { 'Authorization': 'Basic ' + token } }) 
+    return this.http.get<GetPost[]>(this.apiUrl+"/"+this.allPosts) 
   }
   
  createNewPost(newPost: PostBid):Observable<PostBid>{
   //  console.log(newPost);
   //  return
   const token = sessionStorage.getItem('token')
-  return this.http.post<PostBid>(this.apiUrl+"/"+this.postBid,newPost, { headers: { 'Authorization': 'Basic ' + token } }) 
+  return this.http.post<PostBid>(this.apiUrl+"/"+this.postBid,newPost) 
  }
 }

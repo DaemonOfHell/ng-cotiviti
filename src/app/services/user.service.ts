@@ -29,9 +29,8 @@ export class UserService {
     // private msgService: MessageService
     ) { }
 
-    getUsers(): Observable<User[]>{ 
-      const token = sessionStorage.getItem('token')
-      return this.http.get<User[]>(`${this.apiUrl}/${this.admin}/${this.all}`,{ headers: { 'Authorization': 'Basic ' + token } }) 
+    getUsers(): Observable<User[]>{  
+      return this.http.get<User[]>(`${this.apiUrl}/${this.admin}/${this.all}`) 
     }
 
     getUser(uid: number):Observable<User>{  
@@ -62,7 +61,7 @@ export class UserService {
     deleteUser(uid: number):Observable<User>{
       const url = `${this.apiUrl}/${this.deleteOne}/${uid}` 
       const token = sessionStorage.getItem('token')
-      return this.http.delete<User>(url,{ headers: { 'Authorization': 'Basic ' + token } })
+      return this.http.delete<User>(url)
     }
 
     searchUsersByName(term: string): Observable<User[]>{

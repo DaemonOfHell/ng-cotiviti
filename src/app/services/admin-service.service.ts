@@ -26,13 +26,13 @@ export class AdminServiceService {
   constructor(private http: HttpClient) { }
 
   getTotalUsers():Observable<number>{
-    return this.http.get<number>(this.base_api_url+this.usersExt, { headers: { 'Authorization': 'Basic ' + this.token } }) 
+    return this.http.get<number>(this.base_api_url+this.usersExt) 
   }
   getTotalBids():Observable<number>{
-    return this.http.get<number>(this.base_api_url+this.bidsExt, { headers: { 'Authorization': 'Basic ' + this.token } }) 
+    return this.http.get<number>(this.base_api_url+this.bidsExt) 
   }
   getTotalPosts():Observable<number>{
-    return this.http.get<number>(this.base_api_url+this.postsExt, { headers: { 'Authorization': 'Basic ' + this.token } }) 
+    return this.http.get<number>(this.base_api_url+this.postsExt) 
   }
 
   // getAllUsers():Observable<User[]>{
@@ -40,6 +40,6 @@ export class AdminServiceService {
   // }
 
   getAllPosts():Observable<GetPost[]>{
-    return this.http.get<GetPost[]>('http://localhost:8080/'+this.allPostsExt, { headers: { 'Authorization': 'Basic ' + this.token }})
+    return this.http.get<GetPost[]>('http://localhost:8080/'+this.allPostsExt)
   }
 }

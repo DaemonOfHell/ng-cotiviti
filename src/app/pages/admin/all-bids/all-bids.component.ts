@@ -23,8 +23,8 @@ export class AllBidsComponent implements OnInit {
     })
   }
 
-  removeBid(bid:Bid){
-    this.bidService.deleteBid(bid.id).subscribe(
+  removeBid(bid:any){
+    this.bidService.deleteBid(bid.BID).subscribe(
       ()=>this.fetchAllBids()
     )
   }
