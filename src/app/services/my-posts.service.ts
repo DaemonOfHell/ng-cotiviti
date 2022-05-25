@@ -33,8 +33,7 @@ export class MyPostsService {
       const token = sessionStorage.getItem('token')
       return this.http.post<BidApproval>(this.apiUrl+"/"+this.updateStatus,bid) 
     }
-
-    
+ 
 }
   
   

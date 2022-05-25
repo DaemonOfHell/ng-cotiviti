@@ -18,11 +18,11 @@
             <span class="">{{bid.PRODUCT_DESCRIPTION}}</span> 
             <span class="">{{bid.BID_STATUS}}</span> 
             
-        </div>
+        </div> 
         <button type="button" class="bid" title="make bid" (click)="toggleMakeBidForm(bid.USER_ID, bid.PRODUCT_NAME, bid.PRODUCT_ID)">
             BID
         </button>
     </li>
 </ol>
-
+       
 <app-bid-form [showSelf]="showBidForm" [posterId]="posterId" [productName]="productName" [productId]="productId"></app-bid-form>

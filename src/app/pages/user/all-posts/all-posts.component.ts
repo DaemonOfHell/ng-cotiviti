@@ -23,7 +23,7 @@ export class AllPostsComponent implements OnInit {
   ngOnInit(): void {
     this.fetchallPosts()
   }
-
+ 
   fetchallPosts(){
     this.allPostsService.getAllPosts().subscribe(allPosts=>{
       this.allPosts=allPosts

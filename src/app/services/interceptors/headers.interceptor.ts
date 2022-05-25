@@ -16,17 +16,17 @@ export class HeadersInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const token = sessionStorage.getItem('token')
    const Authorization = 'Basic ' + token 
-  if(token){
-      const req = request.clone(
-        {
-          setHeaders:{
-            Authorization
+    if(token){
+        const req = request.clone(
+          {
+            setHeaders:{
+              Authorization
+            }
           }
-        }
-      )
-      return next.handle(req)
-    }else{
-      return next.handle(request)
-    }  
-  }
+        )
+        return next.handle(req)
+      }else{
+        return next.handle(request)
+      }  
+    }
 }
