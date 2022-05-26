@@ -1,7 +1,52 @@
 <div class="all-posts-header">
-    <h1 class="page-heading">All Posts</h1>  
+  <h1 class="page-heading">All Posts</h1>
 </div>
 
+<div class="container">
+  <p-table
+    [value]="allPosts"
+    responsiveLayout="scroll"
+    [paginator]="true"
+    [rows]="7"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[7, 14, 21]"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="USER_ID">
+          user-id<p-sortIcon field="USER_ID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_PRODUCT_ID">
+          product-id<p-sortIcon field="PRODUCT_PRODUCT_ID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_NAME">
+          product-name<p-sortIcon field="PRODUCT_NAME"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_DESCRIPTION">
+          product-description<p-sortIcon
+            field="PRODUCT_DESCRIPTION"
+          ></p-sortIcon>
+        </th>
+        <th>action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+      <tr>
+        <td>{{ post.USER_ID }}</td>
+        <td>{{ post.PRODUCT_PRODUCT_ID }}</td>
+        <td>{{ post.PRODUCT_NAME }}</td>
+        <td>{{ post.PRODUCT_DESCRIPTION }}</td>
+        <td>
+          <button type="button" class="action-btn" title="remove post">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<!-- 
 <div class="list-heading-3">
     <h3 class="badge">user id</h3>
     <h3 >product id</h3>
@@ -21,4 +66,4 @@
         <i class="fa-solid fa-trash-can"></i>
     </button>
 </li>
-</ol>
+</ol> -->

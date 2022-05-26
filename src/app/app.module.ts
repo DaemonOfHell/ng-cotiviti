@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { HeroesComponent } from './components/heroes/heroes.component';
-// import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-// import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-// import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { PostBidComponent } from './components/post-bid/post-bid.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardSummaryComponent } from './components/dashboard-summary/dashboard-summary.component';
@@ -29,18 +25,22 @@ import { AppliedBidsComponent } from './pages/applied-bids/applied-bids.componen
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateBidFormComponent } from './components/overlays/create-bid-form/create-bid-form.component';
 import { MyPostsComponent } from './pages/user/my-posts/my-posts.component';
-import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';  
+import { AllPostsComponent } from './pages/user/all-posts/all-posts.component';
 import { HeadersInterceptor } from './services/interceptors/headers.interceptor';
 import { AllPostsAdminComponent } from './pages/admin/all-posts-admin/all-posts-admin.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
+import { DropdownModule } from 'primeng/dropdown';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { PasswordModule } from 'primeng/password';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HeroesComponent,
-    // HeroDetailComponent,
-    // MessagesComponent,
     DashboardComponent,
-    // HeroSearchComponent,
     PostBidComponent,
     FooterComponent,
     DashboardSummaryComponent,
@@ -61,17 +61,24 @@ import { AllPostsAdminComponent } from './pages/admin/all-posts-admin/all-posts-
     CreateBidFormComponent,
     MyPostsComponent,
     AllPostsComponent,
-    AllPostsAdminComponent 
+    AllPostsAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    TableModule,
+    DropdownModule,
+    OverlayPanelModule,
+    InputTextModule,
+    PasswordModule,
+    ButtonModule,
   ],
-  providers: [ 
-    {provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true}
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,16 +1,39 @@
 <div id="login-card">
-    <h2>BIDDING APP | LOGIN</h2>
-   
-    <form action="" (ngSubmit)="onSubmit()"> 
-        <div class="form-control">
-            <label for="username">username: </label>
-            <input [(ngModel)]="loginUserData.username" type="text" name="username" id="username" placeholder="username..">
-        </div>
-        <div class="form-control">
-            <label for="password">password: </label>
-            <input [(ngModel)]="loginUserData.password" type="password" name="password" id="password" placeholder="password..">
-        </div>
-        <button type="submit" id="btn-login">Login</button>
-    </form>
+  <h2>BIDDING APP | LOGIN</h2>
+
+  <form action="" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <span class="p-float-label">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="loginUserData.username"
+          pInputText
+        />
+        <label for="username">User name</label>
+      </span>
+    </div>
+
+    <div class="form-control">
+      <span class="p-float-label">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="loginUserData.password"
+          pInputText
+        />
+        <label for="password">Password</label>
+      </span>
+    </div>
+
+    <button
+      class="p-button-rounded"
+      type="submit"
+      id="btn-login"
+      label="Login"
+      pButton
+    ></button>
+  </form>
 </div>
- 

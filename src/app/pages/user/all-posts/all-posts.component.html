@@ -1,28 +1,56 @@
-<h1 class="page-heading">All Posts</h1>    
+<h1 class="page-heading">All Posts</h1>
 
-<div class="list-heading-3">
-    <h3 class="badge">PRODUCT_OWNER</h3>
-    <!-- <h3 class="badge">PRODUCT_ID</h3> -->
-    <h3 class="">PRODUCT_NAME</h3>
-    <h3 class="">PRODUCT_DESCRIPTION</h3>
-    <h3 class="">BID_STATUS</h3>  
-       
-</div>
-<ol class="all-bids-list">
-
-    <li *ngFor="let bid of allPosts">
-        <div class="bid-item">   
-            <span class="">{{bid.USER_ID}}</span>
-            <!-- <span class="">{{bid.PRODUCT_ID}}</span> -->
-            <span class="">{{bid.PRODUCT_NAME}}</span>
-            <span class="">{{bid.PRODUCT_DESCRIPTION}}</span> 
-            <span class="">{{bid.BID_STATUS}}</span> 
-            
-        </div> 
-        <button type="button" class="bid" title="make bid" (click)="toggleMakeBidForm(bid.USER_ID, bid.PRODUCT_NAME, bid.PRODUCT_ID)">
-            BID
+<div class="container">
+  <p-table
+    [value]="allPosts"
+    responsiveLayout="scroll"
+    [paginator]="true"
+    [rows]="7"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[7, 14, 21]"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="USER_ID">
+          PRODUCT OWNER<p-sortIcon field="USER_ID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_NAME">
+          PRODUCT NAME<p-sortIcon field="PRODUCT_NAME"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_DESCRIPTION">
+          PRODUCT DESC<p-sortIcon field="PRODUCT_DESCRIPTION"></p-sortIcon>
+        </th>
+        <th pSortableColumn="BID_STATUS">
+          BID STATUS<p-sortIcon field="BID_STATUS"></p-sortIcon>
+        </th>
+        <th>ACTION</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+      <tr>
+        <td>{{ post.USER_ID }}</td>
+        <td>{{ post.PRODUCT_NAME }}</td>
+        <td>{{ post.PRODUCT_DESCRIPTION }}</td>
+        <td>{{ post.BID_STATUS }}</td>
+        <button
+          type="button"
+          class="bid"
+          title="make bid"
+          (click)="
+            toggleMakeBidForm(post.USER_ID, post.PRODUCT_NAME, post.PRODUCT_ID)
+          "
+        >
+          BID
         </button>
-    </li>
-</ol>
-       
-<app-bid-form [showSelf]="showBidForm" [posterId]="posterId" [productName]="productName" [productId]="productId"></app-bid-form>
+      </tr>
+    </ng-template>
+
+    <app-bid-form
+      [showSelf]="showBidForm"
+      [posterId]="posterId"
+      [productName]="productName"
+      [productId]="productId"
+    ></app-bid-form
+  ></p-table>
+</div>

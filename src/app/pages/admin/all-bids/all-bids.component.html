@@ -1,14 +1,70 @@
-<h1 class="page-heading">All Bids</h1>    
+<h1 class="page-heading">All Bids</h1>
 
-<div class="list-heading-3">
+<div class="container">
+  <p-table
+    [value]="allBids"
+    responsiveLayout="scroll"
+    [paginator]="true"
+    [rows]="7"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[7, 14, 21]"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="BID">
+          bid-ID<p-sortIcon field="BID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="USER_ID">
+          publisher-ID<p-sortIcon field="USER_ID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="BID_STATUS">
+          status:type<p-sortIcon field="BID_STATUS"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_NAME">
+          product-Name<p-sortIcon field="PRODUCT_NAME"></p-sortIcon>
+        </th>
+        <th pSortableColumn="PRODUCT_PRODUCT_ID">
+          product-ID<p-sortIcon field="PRODUCT_PRODUCT_ID"></p-sortIcon>
+        </th>
+        <th pSortableColumn="BIDDING_RATE">
+          running-at<p-sortIcon field="BIDDING_RATE"></p-sortIcon>
+        </th>
+        <th>action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-bid>
+      <tr>
+        <td>{{ bid.BID }}</td>
+        <td>{{ bid.USER_ID }}</td>
+        <td>{{ bid.BID_STATUS }}</td>
+        <td>{{ bid.PRODUCT_NAME }}</td>
+        <td>{{ bid.PRODUCT_PRODUCT_ID }}</td>
+        <td>{{ bid.BIDDING_RATE }}/-</td>
+        <td>
+          <button
+            type="button"
+            class="action-btn"
+            title="remove bid"
+            (click)="removeBid(bid)"
+          >
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+------------------------------------------------
+<!-- <div class="list-heading-3">
     <h3 class="badge">bid-ID</h3>
     <h3 class="">publisher-ID</h3> 
     <h3 class="">status:type</h3>
     <h3 class="">product-Name</h3>  
     <h3 class="">product-ID</h3>  
     <h3 class="">running-at</h3>  
-</div>
-<ol class="all-bids-list">
+</div> -->
+<!-- <ol class="all-bids-list">
 
     <li *ngFor="let bid of allBids">
         <div class="bid-item"> 
@@ -19,12 +75,11 @@
             <span class="">{{bid.PRODUCT_PRODUCT_ID}}</span>  
             <span class="">{{bid.BIDDING_RATE}}/-</span>  
 
-            <!-- <span class="title">{{bid.id}}</span>
-            <span class="price">{{bid.id}}./-</span> -->
+ 
         </div>
         <button type="button" class="remove" title="remove bid"
         (click)="removeBid(bid)">
         <i class="fa-solid fa-trash-can"></i>
         </button>
     </li>
-</ol>
+</ol> -->

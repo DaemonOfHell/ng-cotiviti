@@ -1,106 +1,132 @@
-*{
-    transition: .4s;
+/* * {
+  transition: 0.4s;
+} */
+.container {
+  width: 80%;
+  margin: 3rem auto;
+  margin-bottom: 2rem;
 }
-.all-users-header{
-    width: 60%;
-    margin: 3rem auto; 
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.all-users-header {
+  width: 60%;
+  margin: 3rem auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* h1.page-heading{
     text-align: center;  
 } */
 
-.list-heading-3{
-    width: 60%;
-    /* grid:1fr; */
-    margin: 0 auto; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+.list-heading-3 {
+  width: 60%;
+  /* grid:1fr; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
- 
-.list-heading-3 h3{
-    display: inline-block;
-    text-decoration: underline;
-    font-weight: 700;
+
+.list-heading-3 h3 {
+  display: inline-block;
+  text-decoration: underline;
+  font-weight: 700;
 }
-ol.all-users-list{
-    width: 60%;
-    margin: 0 auto; 
+ol.all-users-list {
+  width: 60%;
+  margin: 0 auto;
 }
 
 ol.all-users-list li {
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;    
-    border: 1px solid black; 
-    margin: 1rem 0;
-    height: 2.4rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border: 1px solid black;
+  margin: 1rem 0;
+  height: 2.4rem;
 }
 
-.user-item{ 
-    /* text-align: center; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    width: 100%; 
-    height: 100%;
-    font-size: 1.2rem;
-    /* padding: 2rem 0; */
-    position: absolute;
+.user-item {
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  /* padding: 2rem 0; */
+  position: absolute;
 }
 /* .user-item span{
     display: inline-block; 
 } */
-.user-item span.badge{
-    background-color: black;
-    color: white;
-    display: inline-block;
-    width: 10%;
-    height: 100%;
-    text-align: center;
+.user-item span.badge {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  text-align: center;
 }
-.user-item span.name{
-    width: 50%;
-    /* left: 13%; */
-    /* position: absolute;   */
-    text-align: center;
-    /* border: 1px solid black; */
-    text-overflow: clip;
+.user-item span.name {
+  width: 50%;
+  /* left: 13%; */
+  /* position: absolute;   */
+  text-align: center;
+  /* border: 1px solid black; */
+  text-overflow: clip;
 }
-.user-item span.role{
-    width: 20%;
-    /* left: 53%; */
-    /* position: absolute;  */
-    /* border: 1px solid black; */
-    text-overflow: clip;
-    text-align: right;
-    padding-right: 1rem;
-    color: rebeccapurple;
+.user-item span.role {
+  width: 20%;
+  /* left: 53%; */
+  /* position: absolute;  */
+  /* border: 1px solid black; */
+  text-overflow: clip;
+  text-align: right;
+  padding-right: 1rem;
+  color: rebeccapurple;
 }
 
-button.remove{
-    position: absolute;
-    height: 2.3rem;
-    top: 0;
-    right: -3rem;
-    margin: 0;
-    padding: .2rem .8rem; 
-    /* border-right: 2px solid pink; */
-    background-color: maroon; 
-    color: white;
-    font-family: 'Poppins';
+button#btn-rigid {
+  min-width: 20%;
 }
- 
 
-button.remove:hover{
-    transform: scale(1.2);
-    transition: .14s;
+button.action-btn {
+  margin: 0;
+  padding: 0;
+}
+button.action-btn:hover {
+  transform: scale(1.4);
+  transition: 0.2s;
+  color: black;
+  background-color: transparent;
+}
+
+/* button.remove {
+  position: absolute;
+  height: 2.3rem;
+  top: 0;
+  right: -3rem;
+  margin: 0;
+  padding: 0.2rem 0.8rem; 
+  background-color: maroon;
+  color: white;
+  font-family: "Poppins";
+} */
+
+/* button.remove:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+} */
+
+.centered-overlay {
+  width: 100%;
+  height: 70%;
+  background-color: gray;
+  position: absolute;
 }

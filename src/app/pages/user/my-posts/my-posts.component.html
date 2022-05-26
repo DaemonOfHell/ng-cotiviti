@@ -1,30 +1,33 @@
-<h1 class="page-heading">My Posts (Offers)</h1>    
+<h1 class="page-heading">My Posts (Offers)</h1>
 
 <div class="list-heading-3">
-    <h3 class="badge">bid(id)</h3>
-    <h3 class="">isSettled</h3>
-    <h3 class="">bid_status</h3> 
-    <h3 class="">product-Name</h3>  
-    <h3 class="">bidder Id</h3>  
-    <h3 class="">top_bid(Rs.)</h3>   
+  <h3 class="badge">bid(id)</h3>
+  <h3 class="">isSettled</h3>
+  <h3 class="">bid_status</h3>
+  <h3 class="">product-Name</h3>
+  <h3 class="">bidder Id</h3>
+  <h3 class="">top_bid(Rs.)</h3>
 </div>
 <ol class="all-bids-list">
-
-    <li *ngFor="let bid of myPosts">
-        <div class="bid-item">   
-            <span class="">{{bid.BIDID}}</span>
-            <span class="">{{bid.IS_SETTLED?true:false}}</span>
-            <span class="">{{bid.BID_STATUS}}</span> 
-            <span class="">{{bid.PRODUCT_NAME}}</span>  
-            <span class="">{{bid.USER_ID}}</span>  
-            <span class="">{{bid.BIDDING_RATE}}/-</span>
- 
-        </div>
-        <button type="button" class="accept" title="accept bid" (click)="acceptBid(bid)">
-            <i class="fa fa-check" aria-hidden="true"></i>
-        </button>
-        <button type="button" class="reject" title="reject bid" >
-            <i class="fa fa-times" aria-hidden="true"></i>
-        </button>
-    </li>
+  <li *ngFor="let bid of myPosts">
+    <div class="bid-item">
+      <span class="">{{ bid.BIDID }}</span>
+      <span class="">{{ bid.IS_SETTLED ? true : false }}</span>
+      <span class="">{{ bid.BID_STATUS }}</span>
+      <span class="">{{ bid.PRODUCT_NAME }}</span>
+      <span class="">{{ bid.USER_ID }}</span>
+      <span class="">{{ bid.BIDDING_RATE }}/-</span>
+    </div>
+    <button
+      type="button"
+      class="accept"
+      title="accept bid"
+      (click)="acceptBid(bid)"
+    >
+      <i class="fa fa-check" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="reject" title="reject bid">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </li>
 </ol>
